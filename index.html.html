@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>게임 홈페이지</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:scroll;
+    font-family:'Segoe UI', sans-serif;
+}
+
+.hero{
+    position:relative;
+    height:100vh;
+}
+
+
+.video-bg{
+    width:100%;
+    height:100vh;
+    object-fit:cover;
+    display:block;
+}
+
+
+.top-menu{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:center;
+    gap:50px;
+    z-index:10;
+}
+
+
+.logo img{
+    height:90px;
+    width:auto;
+}
+
+.top-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+    text-shadow:0 0 10px rgba(0,0,0,0.8);
+    transition:0.3s;
+}
+
+.top-menu a:hover{
+    color:gold;
+    transform:scale(1.05);
+}
+
+.caution{
+    position:relative;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    cursor:pointer;
+    text-shadow:0 0 10px rgba(0,0,0,0.8);
+}
+
+.caution:hover{
+    color:gold;
+}
+
+.caution-box{
+    position:absolute;
+    top:40px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:280px;
+    padding:15px;
+
+    background:rgba(0,0,0,0.9);
+    border:1px solid gold;
+    border-radius:10px;
+
+    color:white;
+    font-size:16px;
+    line-height:1.6;
+
+    display:none;
+    z-index:1000;
+}
+
+.caution:hover .caution-box{
+    display:block;
+}
+
+.city{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+}
+
+.city img{
+    width:100%;
+    height:100vh;
+    object-fit:cover;
+    display:block;
+}
+
+
+.wings{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+}
+.wings img{
+    width:100%;
+    height:100vh;
+    object-fit:cover;
+    display:block;
+}
+
+
+.company{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+}
+
+.company  img{
+    width:100%;
+    height:100vh;
+    object-fit:cover;
+    display:block;
+}
+
+
+.video-controls{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:rgba(0,0,0,0.6);
+    padding:15px;
+    border-radius:10px;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+button{
+    padding:8px 15px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+
+ <section class="hero">   
+<video id="bgVideo" class="video-bg" autoplay loop playsinline>
+    <source src="./이미지/background.mp4" type="video/mp4">
+</video>
+
+
+<div class="top-menu">
+
+
+    <a href="홈페이지 index.html" class="logo">
+        <img src="./이미지/logo.png" alt="게임 로고">
+    </a>
+
+    <a href="./html/introduce.html">소개</a>
+    <a href="./html/encyclopedia.html">도감</a>
+    <a href="./html/story.html">스토리</a>
+
+     <div class="caution">
+        <span>주의사항</span>
+
+        <div class="caution-box">
+            본 홈페이지는 학교과제 목적으로 제작되었습니다.<br>
+            때문에 많이 허접하다는 점 이해해 주시길 바랍니다.<br>
+            만약 저작권등으로 문제가 발생할 시 곧바로 삭제 조치하겠습니다.<br>
+        </div>
+</div>
+</section>
+
+
+<div class="video-controls">
+    <button id="playPauseBtn">일시정지</button>
+
+    <label>음량</label>
+    <input
+        type="range"
+        id="volumeControl"
+        min="0"
+        max="1"
+        step="0.1"
+        value="0.5">
+</div>
+
+<script>
+const video = document.getElementById("bgVideo");
+const btn = document.getElementById("playPauseBtn");
+const volumeControl = document.getElementById("volumeControl");
+
+
+video.volume = 0.5;
+
+
+btn.addEventListener("click", () => {
+    if(video.paused){
+        video.play();
+        btn.textContent = "일시정지";
+    }else{
+        video.pause();
+        btn.textContent = "재생";
+    }
+});
+
+
+volumeControl.addEventListener("input", () => {
+    video.volume = volumeControl.value;
+});
+</script>
+
+<section class="city">
+
+    <img src="./이미지/city.png" alt="도시">
+
+</section>
+
+<section class="wings">
+
+    <img src="./이미지/wings.png" alt="날개">
+
+</section>
+
+<section class="company">
+ 
+    <img src="./이미지/company.png" alt="컴퍼니">
+
+</section>
+
+</body>
+</html>
