@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HE 도감</title>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:scroll;
+      background-color: rgb(34, 34, 34);
+}
+
+.hero{
+    position:relative;
+    height:100vh;
+}
+
+.top-menu{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:center;
+    gap:50px;
+    z-index:10;
+}
+
+
+.logo img{
+    height:90px;
+    width:auto;
+}
+
+.top-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+    text-shadow:0 0 10px rgba(0,0,0,0.8);
+    transition:0.3s;
+}
+
+.top-menu a:hover{
+    color:gold;
+    transform:scale(1.05);
+}
+
+.panel-HE{
+    position:fixed;
+    top:0;
+    left:0;
+    width:20%;
+    height:100vh;
+    background:black;
+    border-right:3px solid red;
+    z-index:1;
+}
+
+.encyclopedia-UI img{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 19.9%;
+    z-index: 2;
+}
+
+.panel-HE img{
+    position:fixed;
+    top: 370px;
+    left: 20px;
+    width: 15%;
+}
+
+.content-area{
+    margin-left:20%;
+    padding-top:150px;
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+.card{
+    text-align:center;
+    color:white;
+}
+
+.card img{
+    width:250px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card img:hover{
+    transform:scale(1.05);
+}
+
+.card p{
+    margin-top:15px;
+    font-size:14px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="top-menu">
+
+    <a href="../index.html" class="logo">
+        <img src="../이미지/logo.png" alt="게임 로고">
+    </a>
+
+    <a href="introduce.html">소개</a>
+    <a href="encyclopedia.html">도감</a>
+    <a href="story.html">스토리</a>
+
+</div>
+
+<div class="panel-HE img">
+    
+    <img src="../이미지/HE.png" alt="패널 히">
+</div>
+
+<div class="encyclopedia-UI">
+    
+    <img src="../이미지/도감UI.png" alt="도감 패널">
+</div>
+
+<div class="content-area">
+
+    <div class="card">
+        <img src="../이미지/마탄.png" alt="HE1">
+        <p>역시 네 말대로 어떤 사람이라도 맞출 수 있는 마법의 탄환이로구나.</p>
+    </div>
+
+    <div class="card">
+        <img src="../이미지/눈의여왕.png" alt="HE2">
+        <p>"눈이 서서히 녹고 있어요...그게 봄이 오고 있기 때문인지, <br>
+             혹은 궁전이 부서지고 있는 중일지도 모르지만."</p>
+    </div>
+
+    <div class="card">
+        <img src="../이미지/얀데레.png" alt="HE3">
+        <p>소중한 친구들을 두고 올 수 없어서 슬펐던 아이는 기막힌 생각을 해냈지!</p>
+    </div>
+
+</div>
+
+</body>
+</html>
+
