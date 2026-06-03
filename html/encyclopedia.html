@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>도감 페이지</title>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:scroll;
+      background-color: black;
+}
+
+.hero{
+    position:relative;
+    height:100vh;
+}
+
+.top-menu{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:center;
+    gap:50px;
+    z-index:10;
+}
+
+
+.logo img{
+    height:90px;
+    width:auto;
+}
+
+.top-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+    text-shadow:0 0 10px rgba(0,0,0,0.8);
+    transition:0.3s;
+}
+
+.top-menu a:hover{
+    color:gold;
+    transform:scale(1.05);
+}
+
+.encyclopedia-map{
+    position:relative;
+    width:100%;
+    height:100vh;
+    object-fit:cover;
+    display:block;
+}
+
+.encyclopedia-map img{
+    width:100%;
+    display:block;
+}
+
+.box{
+    position:absolute;
+    display:block;
+    border:2px solid transparent;
+}
+
+.zayin{
+    left:200px;
+    top:400px;
+    width:280px;
+    height:250px;
+}
+
+.teth{
+    left:530px;
+    top:400px;
+    width:280px;
+    height:250px;
+}
+
+.he{
+    left:830px;
+    top:400px;
+    width:280px;
+    height:250px;
+}
+
+.waw{
+    left:1140px;
+    top:400px;
+    width:280px;
+    height:250px;
+}
+
+.aleph{
+    left:1450px;
+    top:400px;
+    width:280px;
+    height:250px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="top-menu">
+
+    <a href="../홈페이지 index.html" class="logo">
+        <img src="../이미지/logo.png" alt="게임 로고">
+    </a>
+
+    <a href="introduce.html">소개</a>
+    <a href="encyclopedia.html">도감</a>
+    <a href="story.html">스토리</a>
+
+</div>
+
+<div class="encyclopedia-map">
+
+    <img src="../이미지/도감.jpg" alt="도감">
+
+    <a href="zayin.html" class="box zayin"></a>
+
+    <a href="teth.html" class="box teth"></a>
+
+    <a href="he.html" class="box he"></a>
+
+    <a href="waw.html" class="box waw"></a>
+
+    <a href="aleph.html" class="box aleph"></a>
+
+</div>
+
+</body>
+</html>
+
